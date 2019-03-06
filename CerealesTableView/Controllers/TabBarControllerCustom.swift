@@ -13,12 +13,30 @@ class TabBarControllerCustom: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor : UIColor.black], for: .selected)
+        tabBarItem = self.tabBar.items![0]
+        tabBarItem.image = UIImage(named: "cerealBox")?.withRenderingMode(.alwaysOriginal)
         
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor : UIColor.white], for: .normal)
+        tabBarItem.selectedImage = UIImage(named: "cerealBoxSelected")?.withRenderingMode(.alwaysOriginal)
+        
+        
+        tabBarItem = self.tabBar.items![1]
+        tabBarItem.image = UIImage(named: "search")?.withRenderingMode(.alwaysOriginal)
+        
+        tabBarItem.selectedImage = UIImage(named: "searchSelected")?.withRenderingMode(.alwaysOriginal)
+        
+        
+        tabBarItem = self.tabBar.items![2]
+        tabBarItem.image = UIImage(named: "profile")?.withRenderingMode(.alwaysOriginal)
+        
+        tabBarItem.selectedImage = UIImage(named: "profileSelected")?.withRenderingMode(.alwaysOriginal)
+        
+        
+        for index in 0..<tabBar.items!.count{
+         tabBarItem = self.tabBar.items![index]
+         
+         
+         tabBarItem.imageInsets = UIEdgeInsets(top: 6, left: 0, bottom: -6, right: 0)
+         }
     }
-    
-
-    
 
 }

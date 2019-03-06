@@ -25,8 +25,9 @@ class Cereal {
     var weight:Float
     var cups:Float
     var rating:Float
+    var img:UIImage
     
-    init(name:String, mfr:String, type:String, calories:Int, protein:Int, fat:Int, sodium:Float, carbo:Float, sugars:Int, potass:Int, vitamins:Int, shelf:Int, weight:Float, cups:Float, rating:Float) {
+    init(name:String, mfr:String, type:String, calories:Int, protein:Int, fat:Int, sodium:Float, carbo:Float, sugars:Int, potass:Int, vitamins:Int, shelf:Int, weight:Float, cups:Float, rating:Float, img:UIImage) {
         self.name = name
         self.mfr = mfr
         self.type = type
@@ -42,6 +43,7 @@ class Cereal {
         self.weight = weight
         self.cups = cups
         self.rating = rating
+        self.img = img
     }
     
     public func getName() ->String { return name }

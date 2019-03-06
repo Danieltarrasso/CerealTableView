@@ -8,11 +8,13 @@
 
 import UIKit
 
+var cereales:[Cereal] = [
+    Cereal(name: "FrootLoops", mfr: "yeye", type: "gordura", calories: 1200, protein: 239, fat: 342, sodium: 9.45, carbo: 32.53, sugars: 231, potass: 432, vitamins: 574, shelf: 75, weight: 674, cups: 3724.8, rating: 34.54, img:UIImage(named: "cerealCombo")!)
+]
+
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var cereales:[Cereal] = [
-        Cereal(name: "FrootLoops", mfr: "yeye", type: "gordura", calories: 1200, protein: 239, fat: 342, sodium: 9.45, carbo: 32.53, sugars: 231, potass: 432, vitamins: 574, shelf: 75, weight: 674, cups: 3724.8, rating: 34.54)
-    ]
+    
 
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -48,8 +50,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.delegate = self
         tableView.dataSource = self
     }
-    
-
 
 }
 
